@@ -63,7 +63,7 @@ module "ubuntuservers" {
   enable_ssh_key                = false
   identity_type                 = "UserAssigned"
   identity_ids                  = [azurerm_user_assigned_identity.test.id]
-  
+
   depends_on = [azurerm_resource_group.test]
 }
 
@@ -80,7 +80,7 @@ module "debianservers" {
   vnet_subnet_id      = azurerm_subnet.subnet2.id
   allocation_method   = "Static"
   enable_ssh_key      = true
-  
+
   depends_on = [azurerm_resource_group.test]
 }
 
@@ -97,6 +97,6 @@ module "windowsservers" {
   vnet_subnet_id      = azurerm_subnet.subnet3.id
   license_type        = var.license_type
   identity_type       = var.identity_type
-  
+
   depends_on = [azurerm_resource_group.test]
 }

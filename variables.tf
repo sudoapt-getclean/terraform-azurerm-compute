@@ -143,6 +143,12 @@ variable "delete_os_disk_on_termination" {
   default     = false
 }
 
+variable "os_disk_size_gb" {
+  description = "OS disk size size."
+  type        = number
+  default     = 30
+}
+
 variable "data_sa_type" {
   description = "Data Disk Storage Account type."
   type        = string
